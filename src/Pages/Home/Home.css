@@ -1,0 +1,143 @@
+:root{
+    /* .barrer-img */
+    --mask-image : linear-gradient(to right, transparent, black 75%) ;
+    --mask-image_dark : linear-gradient(to right, transparent, white 75%) ;
+
+    /* .hero-btns .btn */
+    --color_dark : white;
+    --color_light : black;
+}
+.hero{
+    position: relative;
+}
+.banner-img {
+    width: 100%;
+    mask-image: var(--mask-image);
+    -webkit-mask-image: var(--mask-image);
+}
+
+.hero-caption{
+    position: absolute;
+    padding-left: 6px;
+    bottom:0px;
+    width: calc(100% - 30px);
+    left: 30px;
+}
+
+.caption-img{
+    width: 90%;
+    max-width: 420px;
+    margin-bottom: 30px;
+}
+.hero-caption p{
+    max-width: 700px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.hero-btns{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.hero-btns .btn .play-btn, .info-btn{
+    font-size: 25px;
+}
+.hero-btns .btn{
+    border: 0;
+    outline: 0;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    font-weight: 600;
+    color: var(--color_light);
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero-btns .btn.dark-btn{
+    color: white;
+    background: #6d6d6eb3;
+}
+
+.hero-btns .btn:hover{
+    background: #ffffffb5;
+}
+.hero-btns .btn.dark-btn:hover{
+    background: #6d6d6e66;
+}
+
+.more-cards{
+    padding-left: 35px;
+}
+
+
+@media (max-width : 1024px){
+    .hero-caption .title-cards{
+        display: none;
+    }
+
+    .hero-btns{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width : 800px){
+    .hero-caption{
+        padding-left: 4%;
+    }
+    .caption-img{
+        margin-bottom: 10px;
+        width: 40%;
+    }
+    .hero-caption p{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .btn .my-btn{
+        font-size: 20px;
+    }
+
+    .more-cards{
+        padding-left: 4%;
+    }
+}
+
+@media (max-width : 500px){
+    .banner-img{
+        max-width: 499px;
+    }
+    .hero{
+        margin-right: 0;
+    }
+    .caption-img{
+        display: none;
+        
+    }
+
+    .hero-btns .btn .my-btn{
+        font-size: 12px;
+    }
+
+    .btn{
+        padding: 4px 10px;
+        gap: 5px;
+        font-size: 10px;
+        width: 140px;
+        height: 40px;
+        white-space: nowrap;
+    }
+
+}
+
+@media (max-width : 320px){
+    .banner-img{
+        max-width: 339px;
+     }
+}

@@ -1,0 +1,30 @@
+.player{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.player .prev-icon{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 50px;
+    cursor: pointer;
+}
+.player iframe{
+    border-radius: 15px;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+}
+.player-info p{
+    color: rgb(1, 128, 255);
+}
